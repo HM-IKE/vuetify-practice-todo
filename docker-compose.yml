@@ -1,0 +1,12 @@
+version: "3"
+  
+services:
+  vue:
+    container_name: "vue"
+    build: .
+    command: yarn run serve
+    volumes:
+      - .:/myapp
+      - /myapp/node_modules
+    ports:
+      - "8000:8080"
